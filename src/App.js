@@ -1,23 +1,42 @@
-import logo from './logo.svg';
+import React, {} from 'react';
+import Particles from 'tsparticles';
+import Navigation from "./components/Navigation.js";
+import Logo from "./components/Logo.js";
+import Imagelinkform from "./components/Imagelinkform.js";
+import Rank from "./components/Rank.js";
 import './App.css';
+
+const tsparticlesOptions={
+  particles: {
+    number: {
+      value: 133,
+      density: {
+        enable: true,
+        value_area: 710.2328774690454
+      }
+    },
+    color: {
+      value: "#11af52"
+    },
+    shape: {
+      type: "triangle",
+      stroke: {
+        width: 0,
+        color: "#060907"
+      },
+    }
+}
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     {/* <Particles className='particles' params={tsparticlesOptions} />*/}
+      <Navigation />
+      <Logo/>
+      <Rank/>
+          <Imagelinkform/>
+  {/*  <facerecongintion/>*/}
     </div>
   );
 }
